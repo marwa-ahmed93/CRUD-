@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container py-5">
+
+<div class="form-group">
+<label for="name">ProductName :</label>
+<input class="form-control" type="text" id="name">
+
+<div id="userNameAlert" class="d-none alert alert-danger" role="alert">
+   userName must start with Upper case
+  </div>
+</div>
+
+<div class="form-group">
+<label for="price">ProductPrice :</label>
+<input class="form-control" type="number" id="price">
+</div>
+
+<div class="form-group">
+<label for="category">ProductCategory :</label>
+<input class="form-control" type="text" id="category">
+</div>
+
+<div class="form-group">
+<label for="description">ProductDescription :</label>
+<textarea class="form-control" type="text" id="description"></textarea>
+</div>
+<button id="mainButton" onclick="addProduct();" class="btn btn-outline-info">Add Product</button>
+
+</div>
+
+
+<div class="container">
+    <input onkeyup="searchProduct(this.value)" placeholder="Search product" class="form-control w-75 m-auto" type="text">
+<table  class="mt-5 table w-75 m-auto">
+    <thead>
+        <th>index</th>
+        <th>ProductNmae</th>
+        <th>ProductPricce</th>
+        <th>ProductCategory</th>
+        <th>ProductDescrip</th>
+        <th>Update</th>
+        <th>Delete</th>
+
+    </thead>
+    <tbody id="tableBody">
+    
+    </tbody>
+</table>
+</div>
+
+   <script src="js/script.js"></script> 
+</body>
+</html>
